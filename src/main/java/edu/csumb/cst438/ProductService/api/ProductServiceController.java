@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import edu.csumb.cst438.ProductService.api.products.*;
-import edu.csumb.cst438.ProductService.business.*;
+import edu.csumb.cst438.ProductService.business.Manager;
 
 @RestController
 public class ProductServiceController {
@@ -29,8 +29,8 @@ public class ProductServiceController {
     }
 
     private List<Product> callDB() {
-        // API Key from mLab
-        String api = "https://api.mlab.com/api/1/databases?apiKey=V_JbUrLlV_csA2qNNqsU2YgnW2-cz7yC";
+        // API Key from heroku
+        String api = "https://productsdb-service.herokuapp.com/allProducts";
         RestTemplate restTemplate = new RestTemplate();
         
         ResponseEntity<List<Product>> result = restTemplate.exchange(
