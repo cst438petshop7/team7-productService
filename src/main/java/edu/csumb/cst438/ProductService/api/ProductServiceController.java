@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import edu.csumb.cst438.ProductService.api.products.*;
-import edu.csumb.cst438.ProductService.business.Manager;
+// import edu.csumb.cst438.ProductService.business.Manager;
 
 @RestController
 public class ProductServiceController {
